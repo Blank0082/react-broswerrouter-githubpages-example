@@ -1,0 +1,33 @@
+{
+  "name": "react-router-for-github-pages-with-webpack-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "homepage": "https://blank0082.github.io/reactRouterGithubPagesWithWebpackExample",
+  "scripts": {
+    "start": "webpack serve --mode development",
+    "build": "webpack --mode production",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
+  "keywords": [],
+  "author": "blank0082",
+  "license": "ISC",
+  "description": "A tutorial on using React's BrowserRouter and deploying to GitHub Pages with Webpack. ",
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.4",
+    "@babel/preset-react": "^7.24.7",
+    "babel-loader": "^9.2.1",
+    "css-loader": "^7.1.2",
+    "gh-pages": "^6.1.1",
+    "html-webpack-plugin": "^5.6.0",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0"
+  }
+}

@@ -1,0 +1,135 @@
+.navbar {
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 64px;
+    background-color: var(--background-color);
+    white-space: nowrap;
+}
+
+.container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    overflow: hidden;
+    padding: 0 32px;
+}
+
+.title a {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    width: 100%;
+    pointer-events: auto;
+}
+
+.content {
+    flex-grow: 1;
+    position: relative;
+    padding-right: 32px;
+}
+
+.content-body {
+    align-items: center;
+    height: 64px;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.content-body .divider {
+    display: none;
+}
+
+.nav-links {
+    font-size: 14px;
+    display: flex;
+    list-style: none;
+}
+
+.nav-links a {
+    padding: 0 12px;
+    display: flex;
+    line-height: 64px;
+    font-weight: 500;
+    transition: background 1s ease;
+}
+
+.nav-links a:hover {
+    color: var(--link-hover);
+}
+
+.external-link-icon {
+    align-items: center;
+}
+
+.external-link-icon svg {
+    margin-left: 5px;
+    font-size: 0.9em;
+    transition: transform 0.3s ease;
+}
+
+.external-link-icon:hover svg {
+    transform: translateX(2px);
+}
+
+.menu-icon{
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    .content-body {
+        display: none;
+    }
+
+    .title {
+        white-space: normal;
+        max-width: 100%;
+    }
+
+    .navbar .menu-icon {
+        color: var(--link-color);
+        display: flex;
+        position: relative;;
+        width: 48px;
+        align-self: center;
+        font-size: 25px;
+        cursor: pointer;
+        padding: 16px;
+        right: 10px;
+    }
+
+    .navbar.active .content-body {
+        display: flex;
+        position: fixed;
+        top: 65px;
+        right: 0;
+        width: 100%;
+        background-color: var(--background-color);
+        height: 100vh;
+        flex-direction: column;
+        justify-content: right;
+        border: 0cap;
+        overflow-y: auto;
+    }
+
+    .nav-links {
+        padding: 24px 0 96px;
+        flex-direction: column;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 20px;
+        font-size: 14px;
+        border-bottom: 1px solid var(--divider-color);
+        line-height: 24px;
+    }
+}
