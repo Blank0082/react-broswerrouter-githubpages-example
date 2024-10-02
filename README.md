@@ -1,5 +1,7 @@
 # React Router with Webpack and Deployment to GitHub Pages
 
+[English](README.md) | [繁體中文](README.zh-TW.md)
+
 This repository demonstrates how to set up a **React** project using **React Router** with **BrowserRouter** and deploy it to **GitHub Pages** using **Webpack**. The project contains two tutorials, one in Traditional Chinese (繁體中文) and one in English, and provides detailed steps for the setup and deployment process.
 
 ## Table of Contents
@@ -26,12 +28,12 @@ npm install
 ```
 This will install the following:
 
-- React, ReactDOM, React Router
-- Webpack, Webpack Dev Server, Babel, and related tools
+- **React**, **ReactDOM**, **React Router**.
+- **Webpack**, **Webpack Dev Server**, **Babel**, and related tools.
 
 ## project-setup
 
-The project is set up using Webpack and React Router. You can find the main configuration files:
+The project is set up using **Webpack** and **React Router**. You can find the main configuration files:
 
 - **webpack.config.js**: Webpack configuration for bundling and development.
 - **.babelrc**: Babel configuration for transpiling modern JavaScript and JSX.
@@ -39,6 +41,7 @@ The project is set up using Webpack and React Router. You can find the main conf
 You will also find the main React components under the src/ folder.
 
 ### File Structure
+
 ```bash
 ├── public/
 │   ├── index.html          # Main HTML file
@@ -59,31 +62,39 @@ You will also find the main React components under the src/ folder.
 ## Running the Development Server
 
 To run the project locally for development, use the following command:
+
 ```bash
 npm start
 ```
+
 This will start a development server at http://localhost:3000, where you can view the app.
 
 ## Deploying to GitHub Pages
 
-To deploy the project to GitHub Pages, follow these steps:
+To deploy the project to **GitHub Pages**, follow these steps:
 
-1.  In the package.json file, set the homepage field to the URL of your GitHub Pages project. For example:
+1.  In the package.json file, set the **homepage** field to the URL of your GitHub Pages project. For example:
+
 ```json
 {
   "homepage": "https://{your-github-username}.github.io/{your-repo-name}"
 }
 ```
 
-2.	Set the basename in the src/index.js file:
+2.	Set the **basename** in the src/index.js file:
+
 ```javascript
 <BrowserRouter basename="/{your-repo-name}">
 ```
-3.  Make sure the publicPath is set correctly in webpack.config.js:
+
+3.  Make sure the **publicPath** is set correctly in webpack.config.js:
+
 ```javascript
 publicPath: '/{your-repo-name}/',
 ```
+
 4.	Run the deploy command:
+
 ```bash
 npm run deploy
 ```
@@ -95,7 +106,7 @@ This will build the project and deploy it to GitHub Pages.
 For more detailed instructions, please check the tutorials available in this repository:
 
 - [使用 React 的 BrowserRouter 並通過 Webpack 部署到 GitHub Pages (Traditional Chinese)](https://blank0082.github.io/reactRouterGithubPagesWithWebpackExample/tutorialZhTw)
-- [Using React's BrowserRouter and Deploying to GitHub Pages with Webpack (English)](https://blank0082.github.io/reactRouterGithubPagesWithWebpackExample/tutorialEn)
+- [React Router with Webpack and Deployment to GitHub Pages (English)](https://blank0082.github.io/reactRouterGithubPagesWithWebpackExample/tutorialEn)
 
 These tutorials provide a step-by-step guide to setting up the project, configuring Webpack and Babel, and deploying to GitHub Pages.
 
