@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+
 module.exports = (env, argv) => {
   return {
     entry: './src/index.js',
@@ -36,18 +37,20 @@ module.exports = (env, argv) => {
         {
           test: /\.(png|jpe?g|gif|svg|ico)$/i,
           type: 'asset/resource'
-        }// if you want to use images, you need to add this rule
+        } // if you want to use images, you need to add this rule
       ] // rules are used to tell webpack how to handle different file types
     },
     plugins: [
       new HtmlWebpackPlugin({
         template: './public/index.html',
-        filename: 'index.html'
+        filename: 'index.html',
+        favicon: "./public/favicon.ico" // if you want to use a favicon, you need to add this line
       }),
       new HtmlWebpackPlugin({
         template: './public/index.html',
-        filename: '404.html'
-      }), // must set up 404.html for github pages to work
+        filename: '404.html',
+        favicon: "./public/favicon.ico" // if you want to use a favicon, you need to add this line
+      }) // must set up 404.html for github pages to work
     ],
     resolve: {
       extensions: ['.js', '.jsx']
