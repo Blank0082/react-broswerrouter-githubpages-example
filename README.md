@@ -44,11 +44,12 @@ You will also find the main React components under the src/ folder.
 │   ├── index.html          # Main HTML file
 │   └── favicon.ico         # Optional favicon
 ├── src/
-│   ├── components/         # Reusable components like CopyCodeBlock
 │   ├── testPages/          # Tutorial pages (Traditional Chinese and English)
+│   │   ├── components/     # Reusable components like CopyCodeBlock
+│   │   └── css/            # Stylesheets for the project
 │   ├── App.js              # Main App component
 │   ├── index.js            # Entry point for React app
-│   └── css/                # Stylesheets for the project
+│   └── App.css             # Stylesheets for the project
 ├── .babelrc                # Babel configuration
 ├── webpack.config.js       # Webpack configuration
 ├── package.json            # Dependencies and scripts
