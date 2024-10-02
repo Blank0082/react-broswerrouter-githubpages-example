@@ -54,6 +54,7 @@
 }
 
 .nav-links a {
+    color: var(--nav-link-color);
     padding: 0 12px;
     display: flex;
     line-height: 64px;
@@ -62,7 +63,7 @@
 }
 
 .nav-links a:hover {
-    color: var(--link-hover);
+    color: var(--nav-link-hover);
 }
 
 .external-link-icon {
@@ -79,7 +80,7 @@
     transform: translateX(2px);
 }
 
-.menu-icon{
+.menu-icon {
     display: none;
 }
 
@@ -95,9 +96,9 @@
     }
 
     .navbar .menu-icon {
-        color: var(--link-color);
+        color: var(--nav-link-color);
         display: flex;
-        position: relative;;
+        position: relative;
         width: 48px;
         align-self: center;
         font-size: 25px;

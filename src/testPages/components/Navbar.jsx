@@ -26,7 +26,7 @@ function Navbar() {
         <header className={`navbar ${isMenuOpen ? 'active' : ''}`} ref={menuRef}>
             <div className="container">
                 <div className="title">
-                    <Link to='/'>React Router For Github Pages <br /> With Webpack Example</Link>
+                    <Link to='/'>React Router Example:<br />Deploying to GitHub Pages <br />with Webpack</Link>
                 </div>
                 <div className='content'>
                     <div className='content-body'>
@@ -40,7 +40,13 @@ function Navbar() {
                             <Link to='/tutorialEn' onClick={() => setIsMenuOpen(false)}>
                                 Tutorial-en
                             </Link>
-                            <Link to='https://github.com/Blank0082/reactRouterGithubPagesWithWebpackExample' className='external-link-icon' onClick={() => setIsMenuOpen(false)}>
+                            <Link
+                                to='https://github.com/Blank0082/reactRouterGithubPagesWithWebpackExample'
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className='external-link-icon'
+                                onClick={() => setIsMenuOpen(false)}
+                            >
                                 Github
                                 <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" >
                                     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />

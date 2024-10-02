@@ -2,16 +2,17 @@
     /* Light Mode Variables */
     --background-color: #ffffff;
     --text-color: rgba(60, 60, 67);
-    --link-color: #413d54;
-    --link-hover: #3451b2;
+    --nav-link-color: #413d54;
+    --nav-link-hover: #3451b2;
+    --doc-link-color: #3451b2;
+    --doc-link-hover: #3a5ccc;
     --code-block-background: #f6f6f7;
     --code-block-border: #0072ff;
     --code-font: ui-monospace, "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", monospace;
-    --code-size: .875em;
+    --code-font-size: .875em;
     --code-copy-background: #f6f6f7;
     --code-copy-hover: #ffffff;
     --code-copy-border-color: #e2e2e3;
-    --copy-success-color: green;
     --font-size: 16px;
     --divider-color: #e2e2e3;
 }
@@ -20,15 +21,15 @@ body.dark-mode {
     /* Dark Mode Variables */
     --background-color: #1b1b1f;
     --text-color: rgba(255, 255, 245, .86);
-    --link-color: #bb86fc;
-    --link-hover: #9a67ea;
+    --nav-link-color: #bb86fc;
+    --nav-link-hover: #9a67ea;
+    --doc-link-color: #a8b1ff;
+    --doc-link-hover: #5c73e7;
     --code-block-background: #2d2d2d;
     --code-block-border: #bb86fc;
-    --code-copy-background: #bb86fc;
-    --code-copy-hover: #9a67ea;
-    --code-copy-border-color: #2e2e32;
-    --copy-success-color: #03dac6;
-    --font-size: 16px;
+    --code-copy-background: #39037a;
+    --code-copy-hover: #2e0262;
+    --code-copy-border-color: #7c7366;
     --divider-color: #000000;
 }
 
@@ -47,7 +48,7 @@ body {
 }
 
 a {
-    color: var(--link-color);
+    color: var(--nav-link-color);
     text-decoration: inherit;
     text-decoration-color: inherit;
 }
@@ -65,10 +66,12 @@ main {
     overflow: auto;
 }
 
-ul {
+ul,
+ol {
     padding-left: 1.25rem;
     margin: 16px 0;
 }
+
 
 p {
     line-height: 28px;
@@ -88,105 +91,16 @@ h4 {
     margin: 24px 0 16px;
 }
 
-.code {
-    font-family: var(--code-font);
-    font-size: var(--code-size);
-    line-height: 1.7;
+main a {
+    font-weight: 500;
+    color: var(--doc-link-color);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color .25s, opacity .25s;
 }
 
-.dollar {
-    color: var(--code-block-border);
-    user-select: none;
-}
-
-.default {
-    color: var(--text-color);
-}
-
-code {
-    background-color: var(--code-block-background);
-    padding: 2px 0;
-    border-radius: 4px;
-    font-size: 14px;
-    font-family: var(--code-font);
-    color: var(--text-color);
-
-}
-
-.code-block {
-    position: relative;
-    background-color: var(--code-block-background);
-    border-left: 4px solid var(--code-block-border);
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    white-space: pre;
-    padding-left: 24px;
-}
-
-pre {
-    padding: 20px 0;
-    overflow: auto;
-}
-
-.copy-button {
-    opacity: 0;
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    background-color: var(--code-copy-background);
-    color: var(--text-color);
-    padding: 8px 12px;
-    cursor: pointer;
-    border: 1px solid var(--code-copy-border-color);
-    border-radius: 4px;
-    z-index: 3;
-    transition: opacity 0.5s ease, background-color 0.5s ease;
-}
-
-.code-block:hover .copy-button {
-    opacity: 1 ;
-    pointer-events: auto;
-    transform: scale(1);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.copy-button.fade-out {
-    opacity: 0; 
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-}
-
-.copy-button:hover {
-    background-color: var(--code-copy-hover);
-}
-
-.copy-success {
-    position: absolute;
-    right: 64px;
-    top: 12px;
-    background-color: var(--code-copy-background);
-    border: 1px solid var(--code-copy-border-color);
-    border-radius: 4px 0 0 4px;
-    padding: 8px;
-    color: var(--text-color);
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    z-index: 3;
-}
-
-.copy-success.show {
-    opacity: 1;
-}
-
-/* 顯示按鈕和成功消息 */
-.copy-button.show, .copy-success.show {
-    opacity: 1;
-}
-
-/* 淡出動畫 */
-.copy-button.fade-out, .copy-success.fade-out {
-    opacity: 0;
-    transition: opacity 0.5s ease, transform 0.5s ease;
+main a:hover {
+    color: var(--doc-link-hover);
 }
 
 @media (min-width: 960px) {

@@ -1,0 +1,10 @@
+.home-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.column {
+    width: 45%;
+}

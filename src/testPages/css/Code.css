@@ -1,0 +1,90 @@
+code {
+    background-color: var(--code-block-background);
+    color: var(--text-color);
+    font-family: var(--code-font);
+    font-size: var(--code-font-size);
+    padding: 2px;
+    border-radius: 4px;
+    line-height: 1.7;
+}
+
+pre {
+    padding: 20px 0;
+    overflow-x: auto;
+}
+
+.code {
+    width: fit-content;
+    display: block;
+    padding: 0 65px 0 24px;
+}
+
+.code-block {
+    background-color: var(--code-block-background);
+    border-left: 4px solid var(--code-block-border);
+    margin: 16px -24px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    white-space: pre;
+}
+
+.dollar {
+    color: var(--code-block-border);
+    user-select: none;
+}
+
+.code-block:hover .copy-button {
+    opacity: 1;
+    transition: opacity 0.25s;
+}
+
+.copy-button {
+    background-color: var(--code-copy-background);
+    color: var(--text-color);
+    border: 1px solid var(--code-copy-border-color);
+    pointer-events: auto;
+    cursor: pointer;
+    display: inline-flex;
+    position: absolute;
+    width: auto;
+    height: 40px;
+    top: 12px;
+    right: 12px;
+    padding: 0 8px;
+    border-radius: 4px;
+    z-index: 3;
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out, transform 0.3s ease;
+    justify-content: center;
+    align-items: center;
+}
+
+.copy-button svg {
+    width: 24px;
+    height: 24px;
+}
+
+.copy-button:hover {
+    background-color: var(--code-copy-hover);
+}
+
+.copy-button.copied {
+    background-color: var(--code-copy-hover);
+    opacity: 1;
+}
+
+.copy-button.copied::before {
+    margin-right: 12px;
+    content: "Copied";
+    font-weight: 500;
+    z-index: 1;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+@media (min-width: 640px) {
+    .code-block {
+        border-radius: 8px;
+        margin: 16px 0;
+    }
+}
