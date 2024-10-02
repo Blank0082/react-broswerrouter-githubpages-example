@@ -31,7 +31,7 @@ This will install the following:
 - **React**, **ReactDOM**, **React Router**.
 - **Webpack**, **Webpack Dev Server**, **Babel**, and related tools.
 
-## project-setup
+## Project Setup
 
 The project is set up using **Webpack** and **React Router**. You can find the main configuration files:
 
