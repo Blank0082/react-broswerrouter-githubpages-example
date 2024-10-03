@@ -2,7 +2,7 @@
 
 [English Ver README.md](README.md) | [繁體中文版 README.md](README.zh-TW.md)
 
-Website: [React Router Example: Deploying to GitHub Pages with Webpack](https://blank0082.github.io/reactRouterGithubPagesWithWebpackExample/)
+Tutorial Website: [React Router Example: Deploying to GitHub Pages with Webpack](https://blank0082.github.io/reactRouterGithubPagesWithWebpackExample/)
 
 This repository demonstrates how to set up a **React** project using **React Router** with **BrowserRouter** and deploy it to **GitHub Pages** using **Webpack**. The project contains two tutorials, one in Traditional Chinese (繁體中文) and one in English, and provides detailed steps for the setup and deployment process.
 
