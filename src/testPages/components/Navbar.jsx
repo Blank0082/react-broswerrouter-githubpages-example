@@ -26,7 +26,7 @@ function Navbar() {
         <header className={`navbar ${isMenuOpen ? 'active' : ''}`} ref={menuRef}>
             <div className="container">
                 <div className="title">
-                    <Link to='/'>React Router Example:<br />Deploying to GitHub Pages <br />with Webpack</Link>
+                    <Link to='/' onClick={() => setIsMenuOpen(false)}>React Router Example:<br />Deploying to GitHub Pages <br />with Webpack</Link>
                 </div>
                 <div className='content'>
                     <div className='content-body'>

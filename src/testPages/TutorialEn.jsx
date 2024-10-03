@@ -263,7 +263,7 @@ export default App;`} />
                 <p>Once the deployment is complete, you can view your app at <code>https://username.github.io/my-repo-name</code>.</p>
 
                 <h2>Conclusion:</h2>
-                <p>If you need a working example or want to see the full code implementation, feel free to visit my GitHub repository:</p>
+                <p>If you need a working example or want to see the full code implementation, feel free to visit my GitHub repository to view or download:</p>
                 <p>
                     <Link to="https://github.com/blank0082/reactRouterGithubPagesWithWebpackExample" target="_blank" rel="noopener noreferrer">
                         https://github.com/Blank0082/reactRouterGithubPagesWithWebpackExample

@@ -36,8 +36,6 @@ function CopyCodeBlock({ code, isTerminal = false }) {
             >
                 {copySuccess ? (
                     <svg
-                        width="24"
-                        height="24"
                         fill="none"
                         stroke="currentColor"
                         strokeWidth="2"
@@ -51,8 +49,6 @@ function CopyCodeBlock({ code, isTerminal = false }) {
                     </svg>
                 ) : (
                     <svg
-                        width="24"
-                        height="24"
                         fill="none"
                         stroke="currentColor"
                         strokeWidth="2"

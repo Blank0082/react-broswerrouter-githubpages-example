@@ -17,11 +17,12 @@
     position: relative;
     width: 60px;
     height: 34px;
-    background-color: rgba(142, 150, 170, 14);
+    background-color: var(--switch-appearance-background);
+    color: var(--text-color);
     border: 1px solid transparent;
     border-radius: 34px;
     cursor: pointer;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     transition: border 0.2s ease;
@@ -32,47 +33,10 @@
     transition: border 0.2s ease;
 }
 
-.SwitchAppearance[aria-checked="true"] {
-    background-color: var(--nav-link-color);
-}
-
-.icon {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.sun,
-.moon {
-    font-size: 20px;
-    position: absolute;
-    transition: all 0.1s ease;
-}
-
-.sun {
-    left: 3px;
-    color: #f39c12;
-    opacity: 1;
-}
-
-.moon {
-    right: 4px;
-    color: #f1c40f;
-    opacity: 0;
-}
-
-.SwitchAppearance[aria-checked="true"] .sun {
-    opacity: 0;
-}
-
-.SwitchAppearance[aria-checked="true"] .moon {
-    opacity: 1;
-}
-
 .check {
     position: absolute;
     top: 50%;
+    display: inline-flex;
     left: 4px;
     width: 26px;
     height: 26px;
@@ -81,6 +45,13 @@
     border-radius: 50%;
     transition: transform 0.1s ease;
     transform: translateY(-50%);
+    justify-content: center;
+    align-items: center;
+}
+
+.check svg {
+    width: 20px;
+    height: 20px;
 }
 
 .SwitchAppearance[aria-checked="true"] .check {
@@ -102,13 +73,5 @@
         align-items: center;
         border-radius: 8px;
         padding: 12px 14px 12px 16px;
-    }
-
-    .sun {
-        left: 1px;
-    }
-
-    .moon {
-        right: 0px;
     }
 }

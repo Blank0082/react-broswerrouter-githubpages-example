@@ -4,6 +4,7 @@
     --text-color: rgba(60, 60, 67);
     --nav-link-color: #413d54;
     --nav-link-hover: #3451b2;
+    --switch-appearance-background: rgb(142, 150, 170);
     --doc-link-color: #3451b2;
     --doc-link-hover: #3a5ccc;
     --code-block-background: #f6f6f7;
@@ -23,6 +24,7 @@ body.dark-mode {
     --text-color: rgba(255, 255, 245, .86);
     --nav-link-color: #bb86fc;
     --nav-link-hover: #9a67ea;
+    --switch-appearance-background: #bb86fc;
     --doc-link-color: #a8b1ff;
     --doc-link-hover: #5c73e7;
     --code-block-background: #2d2d2d;
@@ -97,6 +99,7 @@ main a {
     text-decoration: underline;
     text-underline-offset: 2px;
     transition: color .25s, opacity .25s;
+    word-break: break-all;
 }
 
 main a:hover {
