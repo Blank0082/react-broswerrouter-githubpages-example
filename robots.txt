@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://blank0082.github.io/reactRouterGithubPagesWithWebpackExample/sitemap.xml
